@@ -42,11 +42,10 @@ Cada exercício apresenta um problema real de qualidade de código, seguido de u
 
 ![Status](https://img.shields.io/badge/Status-Concluído-success?style=flat-square)
 [![Build](https://github.com/andrebecker84/projetoDR2_TP2/actions/workflows/maven.yml/badge.svg?style=flat-square)](https://github.com/andrebecker84/projetoDR2_TP2/actions/workflows/maven.yml)
-![Tests](https://img.shields.io/badge/Testes-148%20passed-brightgreen?style=flat-square)
-![Coverage](https://img.shields.io/badge/Cobertura-85%25-green?style=flat-square)
-![Branches](https://img.shields.io/badge/Branches-56%25-yellow?style=flat-square)
+![Tests](https://raw.githubusercontent.com/andrebecker84/projetoDR2_TP2/master/.github/badges/tests.svg)
+![Coverage](https://raw.githubusercontent.com/andrebecker84/projetoDR2_TP2/master/.github/badges/jacoco.svg)
+![Branches](https://raw.githubusercontent.com/andrebecker84/projetoDR2_TP2/master/.github/badges/branches.svg)
 ![Quality](https://img.shields.io/badge/Qualidade-A+-blue?style=flat-square)
-![Java](https://img.shields.io/badge/Java-21-orange?style=flat-square)
 [![Last Commit](https://img.shields.io/github/last-commit/andrebecker84/projetoDR2_TP2?style=flat-square)](https://github.com/andrebecker84/projetoDR2_TP2)
 [![Repo Size](https://img.shields.io/github/repo-size/andrebecker84/projetoDR2_TP2?style=flat-square)](https://github.com/andrebecker84/projetoDR2_TP2)
 [![License](https://img.shields.io/github/license/andrebecker84/projetoDR2_TP2?style=flat-square&logo=readme&logoColor=white)](LICENSE)
@@ -73,8 +72,8 @@ Cada exercício apresenta um problema real de qualidade de código, seguido de u
 
 ### Pré-requisitos
 - ![Java](https://img.shields.io/badge/Java-21+-orange?style=flat-square&logo=openjdk&logoColor=white) ([Download](https://www.oracle.com/java/technologies/downloads/))
-- **Maven 3.9** ou superior ([Download](https://maven.apache.org/download.cgi))
-- **Git** ([Download](https://git-scm.com/downloads))
+- ![Maven](https://img.shields.io/badge/Maven-3.9+-red?style=flat-square&logo=apachemaven&logoColor=white) ([Download](https://maven.apache.org/download.cgi))
+- ![Git](https://img.shields.io/badge/Git-latest-black?style=flat-square&logo=git&logoColor=white) ([Download](https://git-scm.com/downloads))
 
 ### Comandos
 
@@ -151,9 +150,12 @@ O projeto inclui um **menu interativo** que permite executar testes de forma sel
 ## 📁 Estrutura do Projeto
 
 ```
-projetoDR2_TP2/
+📂 projetoDR2_TP2/
+├── 📂 .github/
+│   └── 📂 workflows/
+│       └── 📄 maven.yml                 # CI/CD Pipeline (Java CI + Maven)
 ├── 📂 doc/
-│   └── 📄 DOCUMENTACAO_TP2.md      # Documentação técnica detalhada
+│   └── 📄 DOCUMENTACAO_TP2.md           # Documentação técnica detalhada
 ├── 📂 src/
 │   ├── 📂 main/java/infnet/andre/tp2/
 │   │   ├── 📄 Aplicacao.java                # Classe principal Spring Boot
@@ -209,12 +211,16 @@ projetoDR2_TP2/
 │   │       ├── NotificacaoServiceAntes.java
 │   │       └── NotificacaoServiceDepois.java
 │   └── 📂 test/java/infnet/andre/tp2/
+│       ├── 📄 ExecutorTestes.java           # Menu interativo de testes
+│       ├── 📄 TestCoverageVerificationTest.java  # Verificação de cobertura
 │       ├── 📂 exercicio01/
 │       │   └── CalculadoraTest.java
 │       ├── 📂 exercicio02/
 │       │   └── DescontoTest.java
 │       └── ... (testes para todos os exercícios)
 ├── 📄 .gitignore
+├── 📄 executar-testes.bat         # Script para Windows
+├── 📄 executar-testes.sh          # Script para Linux/Mac
 ├── 📄 LICENSE                     # Licença MIT
 ├── 📄 pom.xml                     # Configuração Maven
 └── 📄 README.md                   # Este arquivo
@@ -226,22 +232,22 @@ projetoDR2_TP2/
 
 ### SOLID
 
-| Princípio | Descrição | Aplicado | Exercícios |
-|-----------|-----------|----------|------------|
-| **S**RP | Single Responsibility Principle | ✅ | Todos |
-| **O**CP | Open/Closed Principle | ✅ | 6, 7 |
-| **L**SP | Liskov Substitution Principle | ✅ | 3, 6, 7 |
-| **I**SP | Interface Segregation Principle | ✅ | 3, 7 |
-| **D**IP | Dependency Inversion Principle | ✅ | 3, 7 |
+| Princípio  | Descrição                       | Aplicado  | Exercícios  |
+|------------|---------------------------------|-----------|-------------|
+| **S**RP    | Single Responsibility Principle | ✅         | Todos       |
+| **O**CP    | Open/Closed Principle           | ✅         | 6, 7        |
+| **L**SP    | Liskov Substitution Principle   | ✅         | 3, 6, 7     |
+| **I**SP    | Interface Segregation Principle | ✅         | 3, 7        |
+| **D**IP    | Dependency Inversion Principle  | ✅         | 3, 7        |
 
 ### Outros Princípios Fundamentais
 
-| Princípio | Descrição | Exercícios |
-|-----------|-----------|------------|
-| **DRY** | Don't Repeat Yourself | 2, 5, 6, 7 |
-| **KISS** | Keep It Simple, Stupid | Todos |
-| **YAGNI** | You Aren't Gonna Need It | Todos |
-| **CQS** | Command Query Separation | 8, 9, 10 |
+| Princípio  | Descrição                | Exercícios  |
+|------------|--------------------------|-------------|
+| **DRY**    | Don't Repeat Yourself    | 2, 5, 6, 7  |
+| **KISS**   | Keep It Simple, Stupid   | Todos       |
+| **YAGNI**  | You Aren't Gonna Need It | Todos       |
+| **CQS**    | Command Query Separation | 8, 9, 10    |
 
 ---
 
@@ -405,21 +411,21 @@ mvn verify
 
 ### Distribuição de Testes por Exercício
 
-| Exercício | Testes | JUnit | Jqwik | Cobertura | Status |
-|-----------|--------|-------|-------|-----------|--------|
-| Exercício 1 - Nomeação | 10 | 7 | 3 | >90% | ✅ PASS |
-| Exercício 2 - Valores Mágicos | 10 | 10 | 0 | >85% | ✅ PASS |
-| Exercício 3 - Null Object | 3 | 3 | 0 | >80% | ✅ PASS |
-| Exercício 4 - Imutabilidade | 14 | 14 | 0 | >92% ⬆️ | ✅ PASS |
-| Exercício 5 - Complexidade | 13 | 13 | 0 | >90% | ✅ PASS |
-| Exercício 6 - Personalização | 9 | 9 | 0 | >85% | ✅ PASS |
-| Exercício 7 - Abstract Factory | 14 | 14 | 0 | >95% ⬆️ | ✅ PASS |
-| Exercício 8 - CQS Conta | 6 | 6 | 0 | >85% | ✅ PASS |
-| Exercício 9 - CQS Fila | 11 | 11 | 0 | >85% | ✅ PASS |
-| Exercício 10 - CQS Monitor | 17 | 17 | 0 | >85% | ✅ PASS |
-| Exercício 11 - Switch Pedidos | 18 | 18 | 0 | >90% | ✅ PASS |
-| Exercício 12 - Switch Notific. | 17 | 17 | 0 | >90% | ✅ PASS |
-| **TOTAL** | **142** | **139** | **3** | **>85%** | **✅ 100%** |
+| Exercício                      | Testes  | JUnit   | Jqwik  | Cobertura  | Status     |
+|--------------------------------|---------|---------|--------|------------|------------|
+| Exercício 1 - Nomeação         | 10      | 7       | 3      | >90%       | ✅ PASS     |
+| Exercício 2 - Valores Mágicos  | 10      | 10      | 0      | >85%       | ✅ PASS     |
+| Exercício 3 - Null Object      | 3       | 3       | 0      | >80%       | ✅ PASS     |
+| Exercício 4 - Imutabilidade    | 14      | 14      | 0      | >92% ⬆️    | ✅ PASS     |
+| Exercício 5 - Complexidade     | 13      | 13      | 0      | >90%       | ✅ PASS     |
+| Exercício 6 - Personalização   | 9       | 9       | 0      | >85%       | ✅ PASS     |
+| Exercício 7 - Abstract Factory | 14      | 14      | 0      | >95% ⬆️    | ✅ PASS     |
+| Exercício 8 - CQS Conta        | 6       | 6       | 0      | >85%       | ✅ PASS     |
+| Exercício 9 - CQS Fila         | 11      | 11      | 0      | >85%       | ✅ PASS     |
+| Exercício 10 - CQS Monitor     | 17      | 17      | 0      | >85%       | ✅ PASS     |
+| Exercício 11 - Switch Pedidos  | 18      | 18      | 0      | >90%       | ✅ PASS     |
+| Exercício 12 - Switch Notific. | 17      | 17      | 0      | >90%       | ✅ PASS     |
+| **TOTAL**                      | **142** | **139** | **3**  | **>85%**   | **✅ 100%** |
 
 > [!NOTE]
 > **Total de 148 testes** incluindo 6 testes de verificação de cobertura (TestCoverageVerificationTest).
@@ -481,19 +487,6 @@ in the Software without restriction...
 
 ---
 
-## 👨‍💻 Autor
-
-<div align="center">
-
-**André Luis Becker** | *Software Engineer*
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-@becker84-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/becker84)
-[![GitHub](https://img.shields.io/badge/GitHub-@andrebecker84-181717?style=for-the-badge&logo=github)](https://github.com/andrebecker84)
-
-</div>
-
----
-
 ## 🙏 Agradecimentos
 
 - **Instituto Infnet** - pela excelente formação em Engenharia de Software
@@ -505,9 +498,10 @@ in the Software without restriction...
 
 <div align="center">
 
-**Desenvolvido com dedicação e boas práticas** 🧼✨
+<img src="doc/images/card.svg" width="360" />
 
-*Instituto Infnet - Engenharia de Software - 2025*
+**Desenvolvido com dedicação e boas práticas.** 🧼✨
+*Instituto Infnet - Eng. Software - 2025.*
 
 **⭐ Se este projeto foi útil, considere dar uma estrela no repositório!**
 

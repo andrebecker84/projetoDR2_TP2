@@ -124,18 +124,23 @@ O projeto segue a arquitetura padrão do Maven com Spring Boot:
 
 ```
 projetoDR2_TP2/
-├── src/main/java/               # Código-fonte principal
-│   └── infnet/andre/tp2/        # Pacote base
-│       ├── Aplicacao.java       # Classe principal Spring Boot
-│       └── exercicioXX/         # Pacotes por exercício
-├── src/test/java/               # Código de testes
-│   └── infnet/andre/tp2/
+├── .github/workflows/
+│   └── maven.yml                # CI/CD Pipeline (Java CI + Maven)
+├── doc/
+│   └── DOCUMENTACAO_TP2.md      # Documentação técnica detalhada
+├── src/
+│   ├── main/java/infnet/andre/tp2/
+│   │   ├── Aplicacao.java       # Classe principal Spring Boot
+│   │   └── exercicioXX/         # Pacotes por exercício (01-12)
+│   └── test/java/infnet/andre/tp2/
 │       ├── ExecutorTestes.java  # Menu interativo de testes
-│       └── exercicioXX/         # Testes por exercício
-├── doc/                         # Documentação
+│       ├── TestCoverageVerificationTest.java  # Verificação de cobertura
+│       └── exercicioXX/         # Testes por exercício (01-12)
+├── .gitignore
+├── executar-testes.bat          # Script para Windows
+├── executar-testes.sh           # Script para Linux/Mac
+├── LICENSE                      # Licença MIT
 ├── pom.xml                      # Configuração Maven
-├── executar-testes.bat          # Script de testes Windows
-├── executar-testes.sh           # Script de testes Linux/Mac
 └── README.md                    # Documentação de usuário
 ```
 
