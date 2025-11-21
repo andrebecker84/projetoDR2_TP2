@@ -22,7 +22,7 @@ Este projeto implementa 12 exercícios práticos de refatoração de código, ap
 Cada exercício apresenta um problema real de qualidade de código, seguido de uma solução refatorada que aplica boas práticas de engenharia de software. O projeto utiliza Java 21, Spring Boot 3, e ferramentas modernas de teste como JUnit 5, Hamcrest e Jqwik.
 
 > [!TIP]
-> **📊 Estatísticas do Projeto**: 12 exercícios | 148 testes | 42 classes | Cobertura >85% (classes testáveis)
+>> **📊 Estatísticas do Projeto**: 12 exercícios | 148 testes | 42 classes | Cobertura >85% (classes testáveis)
 
 ---
 
@@ -40,15 +40,15 @@ Cada exercício apresenta um problema real de qualidade de código, seguido de u
 
 ## 📊 Badges do Projeto
 
-![Status](https://img.shields.io/badge/Status-Concluído-success?style=flat-square)
-[![Build](https://github.com/andrebecker84/projetoDR2_TP2/actions/workflows/maven.yml/badge.svg?style=flat-square)](https://github.com/andrebecker84/projetoDR2_TP2/actions/workflows/maven.yml)
+![Status](https://img.shields.io/badge/Status-Concluído-success)
+[![Build](https://github.com/andrebecker84/projetoDR2_TP2/actions/workflows/maven.yml/badge.svg)](https://github.com/andrebecker84/projetoDR2_TP2/actions/workflows/maven.yml)
 ![Tests](https://raw.githubusercontent.com/andrebecker84/projetoDR2_TP2/master/.github/badges/tests.svg)
 ![Coverage](https://raw.githubusercontent.com/andrebecker84/projetoDR2_TP2/master/.github/badges/jacoco.svg)
 ![Branches](https://raw.githubusercontent.com/andrebecker84/projetoDR2_TP2/master/.github/badges/branches.svg)
-![Quality](https://img.shields.io/badge/Qualidade-A+-blue?style=flat-square)
-[![Last Commit](https://img.shields.io/github/last-commit/andrebecker84/projetoDR2_TP2?style=flat-square)](https://github.com/andrebecker84/projetoDR2_TP2)
-[![Repo Size](https://img.shields.io/github/repo-size/andrebecker84/projetoDR2_TP2?style=flat-square)](https://github.com/andrebecker84/projetoDR2_TP2)
-[![License](https://img.shields.io/github/license/andrebecker84/projetoDR2_TP2?style=flat-square&logo=readme&logoColor=white)](LICENSE)
+![Quality](https://img.shields.io/badge/Qualidade-A+-blue)
+[![Last Commit](https://img.shields.io/github/last-commit/andrebecker84/projetoDR2_TP2?logo=git&logoColor=white)](https://github.com/andrebecker84/projetoDR2_TP2)
+[![Repo Size](https://img.shields.io/github/repo-size/andrebecker84/projetoDR2_TP2)](https://github.com/andrebecker84/projetoDR2_TP2)
+[![License](https://img.shields.io/github/license/andrebecker84/projetoDR2_TP2?logo=readme&logoColor=white)](LICENSE)
 
 ---
 
@@ -71,9 +71,9 @@ Cada exercício apresenta um problema real de qualidade de código, seguido de u
 ## ⚙️ Como Executar
 
 ### Pré-requisitos
-- ![Java](https://img.shields.io/badge/Java-21+-orange?style=flat-square&logo=openjdk&logoColor=white) ([Download](https://www.oracle.com/java/technologies/downloads/))
-- ![Maven](https://img.shields.io/badge/Maven-3.9+-red?style=flat-square&logo=apachemaven&logoColor=white) ([Download](https://maven.apache.org/download.cgi))
-- ![Git](https://img.shields.io/badge/Git-latest-black?style=flat-square&logo=git&logoColor=white) ([Download](https://git-scm.com/downloads))
+- ![Java](https://img.shields.io/badge/Java-21+-orange?logo=openjdk&logoColor=white) ([Download](https://www.oracle.com/java/technologies/downloads/))
+- ![Maven](https://img.shields.io/badge/Maven-3.9+-red?logo=apachemaven&logoColor=white) ([Download](https://maven.apache.org/download.cgi))
+- ![Git](https://img.shields.io/badge/Git-latest-black?logo=git&logoColor=white) ([Download](https://git-scm.com/downloads))
 
 ### Comandos
 
@@ -123,12 +123,18 @@ O projeto inclui um **menu interativo** que permite executar testes de forma sel
 - ✅ Resultados em tempo real com status visual
 
 **Como usar:**
-1. Execute: `mvn test-compile exec:java` ou `./executar-testes.bat` (Windows) ou `./executar-testes.sh` (Linux/Mac)
-2. Escolha uma opção do menu (1-15)
-3. Veja os resultados detalhados de cada teste
-4. Opção 13: Executa TODOS os testes
-5. Opção 14: Executa testes de verificação automática
-6. Opção 15: Exibe estatísticas completas
+1. Execute: 
+```shell
+mvn test-compile exec:java
+ 
+./executar-testes.bat     ## Windows  
+./executar-testes.sh      ## Linux/Mac
+```
+2. Escolha uma opção do menu `1 até 15`;
+3. Veja os resultados detalhados de cada teste;
+4. Opção `13`: Executa `TODOS os testes`;
+5. Opção `14`: Executa `testes de verificação automática`;
+6. Opção `15`: Exibe `estatísticas completas`;
 
 ---
 
@@ -409,6 +415,13 @@ mvn verify
 # Abrir: target/site/jacoco/index.html
 ```
 
+### 📊 Relatório de Cobertura JaCoCo
+
+<div align="center">
+  <img src="doc/images/JaCoCo_2025-11-21_18h44m.png" alt="JaCoCo Coverage Report" width="800" />
+  <p><em>Relatório de cobertura de código gerado pelo JaCoCo</em></p>
+</div>
+
 ### Distribuição de Testes por Exercício
 
 | Exercício                      | Testes  | JUnit   | Jqwik  | Cobertura  | Status     |
@@ -427,9 +440,9 @@ mvn verify
 | Exercício 12 - Switch Notific. | 17      | 17      | 0      | >90%       | ✅ PASS     |
 | **TOTAL**                      | **142** | **139** | **3**  | **>85%**   | **✅ 100%** |
 
-> [!NOTE]
-> **Total de 148 testes** incluindo 6 testes de verificação de cobertura (TestCoverageVerificationTest).
-> ⬆️ **Exercícios 4 e 7** receberam +18 testes adicionais para aumentar cobertura acima de 70%.
+> [!NOTE] 
+>> - **Total de 148 testes** incluindo 6 testes de verificação de cobertura (TestCoverageVerificationTest).
+>> - ⬆️ **Exercícios 4 e 7** receberam +18 testes adicionais para aumentar cobertura acima de 70%.
 
 ---
 
@@ -498,7 +511,9 @@ in the Software without restriction...
 
 <div align="center">
 
-<img src="doc/images/card.svg" width="360" />
+<object data="doc/images/card.svg" type="image/svg+xml" width="360" height="175">
+  <img src="doc/images/card.svg" width="360" alt="André Luis Becker - Software Engineer" />
+</object>
 
 **Desenvolvido com dedicação e boas práticas.** 🧼✨
 *Instituto Infnet - Eng. Software - 2025.*

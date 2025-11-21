@@ -1830,6 +1830,13 @@ mvn clean verify
 # Abrir: target/site/jacoco/index.html
 ```
 
+**Relatório de Cobertura Gerado**:
+
+<div align="center">
+  <img src="images/JaCoCo_2025-11-21_18h44m.png" alt="JaCoCo Coverage Report" width="800" />
+  <p><em>Figura: Relatório de cobertura de código gerado pelo JaCoCo mostrando >85% de cobertura nas classes testáveis</em></p>
+</div>
+
 #### 7.6.3 Métricas de Cobertura
 
 - **Cobertura média**: >80%
