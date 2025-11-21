@@ -1,0 +1,99 @@
+name: Java CI with Maven
+
+on:
+  push:
+    branches: [ "master", "main" ]
+  pull_request:
+    branches: [ "master", "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        java-version: [21]
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up JDK ${{ matrix.java-version }}
+      uses: actions/setup-java@v4
+      with:
+        java-version: ${{ matrix.java-version }}
+        distribution: 'temurin'
+        cache: maven
+
+    - name: Build with Maven
+      run: mvn -B clean compile --file pom.xml
+
+    - name: Run tests
+      run: mvn -B test --file pom.xml
+
+    - name: Generate JaCoCo coverage report
+      run: mvn -B jacoco:report --file pom.xml
+
+    - name: Verify coverage threshold
+      run: mvn -B jacoco:check --file pom.xml
+
+    - name: Generate JaCoCo Badge
+      id: jacoco
+      uses: cicirello/jacoco-badge-generator@v2
+      with:
+        jacoco-csv-file: target/site/jacoco/jacoco.csv
+        badges-directory: .github/badges
+        generate-branches-badge: true
+        generate-summary: true
+
+    - name: Log coverage percentage
+      run: |
+        echo "coverage = ${{ steps.jacoco.outputs.coverage }}"
+        echo "branches = ${{ steps.jacoco.outputs.branches }}"
+
+    - name: Extract test results
+      if: always()
+      run: |
+        mkdir -p .github/badges
+        # Extract test counts from Surefire reports
+        TESTS=$(grep -oP '(?<=tests=")[^"]*' target/surefire-reports/TEST-*.xml | awk '{s+=$1} END {print s}')
+        FAILURES=$(grep -oP '(?<=failures=")[^"]*' target/surefire-reports/TEST-*.xml | awk '{s+=$1} END {print s}')
+        ERRORS=$(grep -oP '(?<=errors=")[^"]*' target/surefire-reports/TEST-*.xml | awk '{s+=$1} END {print s}')
+        SKIPPED=$(grep -oP '(?<=skipped=")[^"]*' target/surefire-reports/TEST-*.xml | awk '{s+=$1} END {print s}')
+
+        # Determine badge color
+        if [ "$FAILURES" -eq 0 ] && [ "$ERRORS" -eq 0 ]; then
+          COLOR="brightgreen"
+          MESSAGE="$TESTS passed"
+        else
+          COLOR="red"
+          MESSAGE="$FAILURES failed"
+        fi
+
+        # Create badge using shields.io
+        curl -s "https://img.shields.io/badge/tests-$MESSAGE-$COLOR?style=flat-square" > .github/badges/tests.svg
+
+        echo "Tests: $TESTS, Failures: $FAILURES, Errors: $ERRORS, Skipped: $SKIPPED"
+
+    - name: Commit and push badge
+      if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add -A .github/badges
+        git diff --quiet && git diff --staged --quiet || git commit -m "ci: update coverage badges [skip ci]"
+        git push
+
+    - name: Archive test results
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-results-java-${{ matrix.java-version }}
+        path: target/surefire-reports/
+
+    - name: Archive coverage reports
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: coverage-report-java-${{ matrix.java-version }}
+        path: target/site/jacoco/
