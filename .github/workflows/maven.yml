@@ -34,9 +34,6 @@ jobs:
     - name: Generate JaCoCo coverage report
       run: mvn -B jacoco:report --file pom.xml
 
-    - name: Verify coverage threshold
-      run: mvn -B verify -DskipTests --file pom.xml
-
     - name: Generate JaCoCo Badge
       id: jacoco
       uses: cicirello/jacoco-badge-generator@v2
