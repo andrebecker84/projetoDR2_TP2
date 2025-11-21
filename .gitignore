@@ -86,6 +86,9 @@ $RECYCLE.BIN/
 jacoco.exec
 *.exec
 
+# Jqwik (property-based testing)
+.jqwik-database
+
 # Environment variables
 .env
 .env.local
