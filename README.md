@@ -45,6 +45,9 @@ Cada exercício apresenta um problema real de qualidade de código, seguido de u
 ![Branches](https://raw.githubusercontent.com/andrebecker84/projetoDR2_TP2/master/.github/badges/branches.svg)
 ![Quality](https://img.shields.io/badge/Quality-A+-blue?style=flat-square)
 ![Java](https://img.shields.io/badge/Java-21-orange?style=flat-square)
+[![Last Commit](https://img.shields.io/github/last-commit/andrebecker84/projetoDR2_TP2?style=plastic)](https://github.com/andrebecker84/projetoDR2_TP2)
+[![Repo Size](https://img.shields.io/github/repo-size/andrebecker84/projetoDR2_TP2?style=plastic)](https://github.com/andrebecker84/projetoDR2_TP2)
+[![License](https://img.shields.io/github/license/andrebecker84/projetoDR2_TP2?style=plastic&logo=readme&logoColor=white)](LICENSE)
 
 ---
 
