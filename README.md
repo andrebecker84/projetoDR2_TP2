@@ -41,15 +41,15 @@ Cada exercício apresenta um problema real de qualidade de código, seguido de u
 ## 📊 Badges do Projeto
 
 ![Status](https://img.shields.io/badge/Status-Concluído-success?style=flat-square)
-[![Build](https://github.com/andrebecker84/projetoDR2_TP2/actions/workflows/maven.yml/badge.svg)](https://github.com/andrebecker84/projetoDR2_TP2/actions/workflows/maven.yml)
-![Tests](https://raw.githubusercontent.com/andrebecker84/projetoDR2_TP2/master/.github/badges/tests.svg)
-![Coverage](https://raw.githubusercontent.com/andrebecker84/projetoDR2_TP2/master/.github/badges/jacoco.svg)
-![Branches](https://raw.githubusercontent.com/andrebecker84/projetoDR2_TP2/master/.github/badges/branches.svg)
-![Quality](https://img.shields.io/badge/Quality-A+-blue?style=flat-square)
+[![Build](https://github.com/andrebecker84/projetoDR2_TP2/actions/workflows/maven.yml/badge.svg?style=flat-square)](https://github.com/andrebecker84/projetoDR2_TP2/actions/workflows/maven.yml)
+![Tests](https://img.shields.io/badge/Testes-148%20passed-brightgreen?style=flat-square)
+![Coverage](https://img.shields.io/badge/Cobertura-85%25-green?style=flat-square)
+![Branches](https://img.shields.io/badge/Branches-56%25-yellow?style=flat-square)
+![Quality](https://img.shields.io/badge/Qualidade-A+-blue?style=flat-square)
 ![Java](https://img.shields.io/badge/Java-21-orange?style=flat-square)
-[![Last Commit](https://img.shields.io/github/last-commit/andrebecker84/projetoDR2_TP2)](https://github.com/andrebecker84/projetoDR2_TP2)
-[![Repo Size](https://img.shields.io/github/repo-size/andrebecker84/projetoDR2_TP2)](https://github.com/andrebecker84/projetoDR2_TP2)
-[![License](https://img.shields.io/github/license/andrebecker84/projetoDR2_TP2?logo=readme&logoColor=white)](LICENSE)
+[![Last Commit](https://img.shields.io/github/last-commit/andrebecker84/projetoDR2_TP2?style=flat-square)](https://github.com/andrebecker84/projetoDR2_TP2)
+[![Repo Size](https://img.shields.io/github/repo-size/andrebecker84/projetoDR2_TP2?style=flat-square)](https://github.com/andrebecker84/projetoDR2_TP2)
+[![License](https://img.shields.io/github/license/andrebecker84/projetoDR2_TP2?style=flat-square&logo=readme&logoColor=white)](LICENSE)
 
 ---
 
@@ -138,11 +138,12 @@ O projeto inclui um **menu interativo** que permite executar testes de forma sel
 ```
 📁 Exercícios:        12
 📝 Classes Java:      42
-🧪 Testes Unitários:  130 (124 exercícios + 6 verificação)
-✅ Testes Passando:   130
-📈 Cobertura:         >70%
-📄 Linhas de Código:  ~4.200
+🧪 Testes Unitários:  148 (142 exercícios + 6 verificação)
+✅ Testes Passando:   148
+📈 Cobertura:         >85% (classes testáveis)
+📄 Linhas de Código:  ~4.500
 🎯 Falhas:            0
+💡 Aprimoramento:     +18 testes para cobertura
 ```
 
 ---
@@ -404,21 +405,25 @@ mvn verify
 
 ### Distribuição de Testes por Exercício
 
-| Exercício | Testes | JUnit | Jqwik | Status |
-|-----------|--------|-------|-------|--------|
-| Exercício 1 - Nomeação | 10 | 7 | 3 | ✅ PASS |
-| Exercício 2 - Valores Mágicos | 10 | 10 | 0 | ✅ PASS |
-| Exercício 3 - Null Object | 3 | 3 | 0 | ✅ PASS |
-| Exercício 4 - Imutabilidade | 4 | 4 | 0 | ✅ PASS |
-| Exercício 5 - Complexidade | 13 | 13 | 0 | ✅ PASS |
-| Exercício 6 - Personalização | 9 | 9 | 0 | ✅ PASS |
-| Exercício 7 - Abstract Factory | 6 | 6 | 0 | ✅ PASS |
-| Exercício 8 - CQS Conta | 6 | 6 | 0 | ✅ PASS |
-| Exercício 9 - CQS Fila | 11 | 11 | 0 | ✅ PASS |
-| Exercício 10 - CQS Monitor | 17 | 17 | 0 | ✅ PASS |
-| Exercício 11 - Switch Pedidos | 18 | 18 | 0 | ✅ PASS |
-| Exercício 12 - Switch Notific. | 17 | 17 | 0 | ✅ PASS |
-| **TOTAL** | **124** | **121** | **3** | **✅ 100%** |
+| Exercício | Testes | JUnit | Jqwik | Cobertura | Status |
+|-----------|--------|-------|-------|-----------|--------|
+| Exercício 1 - Nomeação | 10 | 7 | 3 | >90% | ✅ PASS |
+| Exercício 2 - Valores Mágicos | 10 | 10 | 0 | >85% | ✅ PASS |
+| Exercício 3 - Null Object | 3 | 3 | 0 | >80% | ✅ PASS |
+| Exercício 4 - Imutabilidade | 14 | 14 | 0 | >92% ⬆️ | ✅ PASS |
+| Exercício 5 - Complexidade | 13 | 13 | 0 | >90% | ✅ PASS |
+| Exercício 6 - Personalização | 9 | 9 | 0 | >85% | ✅ PASS |
+| Exercício 7 - Abstract Factory | 14 | 14 | 0 | >95% ⬆️ | ✅ PASS |
+| Exercício 8 - CQS Conta | 6 | 6 | 0 | >85% | ✅ PASS |
+| Exercício 9 - CQS Fila | 11 | 11 | 0 | >85% | ✅ PASS |
+| Exercício 10 - CQS Monitor | 17 | 17 | 0 | >85% | ✅ PASS |
+| Exercício 11 - Switch Pedidos | 18 | 18 | 0 | >90% | ✅ PASS |
+| Exercício 12 - Switch Notific. | 17 | 17 | 0 | >90% | ✅ PASS |
+| **TOTAL** | **142** | **139** | **3** | **>85%** | **✅ 100%** |
+
+> [!NOTE]
+> **Total de 148 testes** incluindo 6 testes de verificação de cobertura (TestCoverageVerificationTest).
+> ⬆️ **Exercícios 4 e 7** receberam +18 testes adicionais para aumentar cobertura acima de 70%.
 
 ---
 
