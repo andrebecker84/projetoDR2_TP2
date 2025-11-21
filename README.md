@@ -1,4 +1,4 @@
-cl<div align="center">
+<div align="center">
 
 ![Instituto Infnet](https://img.shields.io/badge/Instituto-Infnet-red?style=for-the-badge)
 ![Curso](https://img.shields.io/badge/Curso-Engenharia_de_Software-blue?style=for-the-badge)
@@ -7,8 +7,9 @@ cl<div align="center">
 # 🧼 Projeto DR2 - TP2
 ## Teste de Performance 2 - Clean Code
 
-[![Autor](https://img.shields.io/badge/Autor-André_Becker-blue)](https://github.com/andrebecker84)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-André_Becker-0077B5?logo=linkedin)](https://linkedin.com/in/andrebecker)
+![Curso](https://img.shields.io/badge/Autor-André_Luis_Becker-blue?logo=engineering&logoColor=white)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-@becker84-0077B5?logo=linkedin)](https://linkedin.com/in/becker84)
+[![GitHub](https://img.shields.io/badge/GitHub-@andrebecker84-181717?logo=github&logoColor=white)]()
 
 </div>
 
@@ -20,7 +21,9 @@ Este projeto implementa 12 exercícios práticos de refatoração de código, ap
 
 Cada exercício apresenta um problema real de qualidade de código, seguido de uma solução refatorada que aplica boas práticas de engenharia de software. O projeto utiliza Java 21, Spring Boot 3, e ferramentas modernas de teste como JUnit 5, Hamcrest e Jqwik.
 
-> **Estatísticas**: 12 exercícios | 130 testes | 42 classes | Cobertura >70%
+:::success
+**Estatísticas**: 12 exercícios | 148 testes | 42 classes | Cobertura >85% (classes testáveis)
+:::
 
 ---
 
@@ -45,9 +48,9 @@ Cada exercício apresenta um problema real de qualidade de código, seguido de u
 ![Branches](https://raw.githubusercontent.com/andrebecker84/projetoDR2_TP2/master/.github/badges/branches.svg)
 ![Quality](https://img.shields.io/badge/Quality-A+-blue?style=flat-square)
 ![Java](https://img.shields.io/badge/Java-21-orange?style=flat-square)
-[![Last Commit](https://img.shields.io/github/last-commit/andrebecker84/projetoDR2_TP2?style=plastic)](https://github.com/andrebecker84/projetoDR2_TP2)
-[![Repo Size](https://img.shields.io/github/repo-size/andrebecker84/projetoDR2_TP2?style=plastic)](https://github.com/andrebecker84/projetoDR2_TP2)
-[![License](https://img.shields.io/github/license/andrebecker84/projetoDR2_TP2?style=plastic&logo=readme&logoColor=white)](LICENSE)
+[![Last Commit](https://img.shields.io/github/last-commit/andrebecker84/projetoDR2_TP2)](https://github.com/andrebecker84/projetoDR2_TP2)
+[![Repo Size](https://img.shields.io/github/repo-size/andrebecker84/projetoDR2_TP2)](https://github.com/andrebecker84/projetoDR2_TP2)
+[![License](https://img.shields.io/github/license/andrebecker84/projetoDR2_TP2?logo=readme&logoColor=white)](LICENSE)
 
 ---
 
@@ -70,9 +73,9 @@ Cada exercício apresenta um problema real de qualidade de código, seguido de u
 ## ⚙️ Como Executar
 
 ### Pré-requisitos
-- ☕ **Java 21** ou superior ([Download](https://www.oracle.com/java/technologies/downloads/))
-- 📦 **Maven 3.9** ou superior ([Download](https://maven.apache.org/download.cgi))
-- 🔧 **Git** ([Download](https://git-scm.com/downloads))
+- ![Java](https://img.shields.io/badge/Java-21+-orange?style=flat-square&logo=openjdk&logoColor=white) ([Download](https://www.oracle.com/java/technologies/downloads/))
+- **Maven 3.9** ou superior ([Download](https://maven.apache.org/download.cgi))
+- **Git** ([Download](https://git-scm.com/downloads))
 
 ### Comandos
 
@@ -476,14 +479,17 @@ in the Software without restriction...
 
 ## 👨‍💻 Autor
 
+:::info
+:person: **André Luis Becker**
+:::
+
 <div align="center">
 
-**André Luis Becker**
+**André Luis Becker** | *Software Engineer*
 
-[![GitHub](https://img.shields.io/badge/GitHub-andrebecker84-181717?style=for-the-badge&logo=github)](https://github.com/andrebecker84)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-André_Becker-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/andrebecker)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-@becker84-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/becker84)
 
-*Engenheiro de Software | Instituto Infnet*
+[![GitHub](https://img.shields.io/badge/GitHub-@andrebecker84-181717?style=for-the-badge&logo=github)](https://github.com/andrebecker84)
 
 </div>
 

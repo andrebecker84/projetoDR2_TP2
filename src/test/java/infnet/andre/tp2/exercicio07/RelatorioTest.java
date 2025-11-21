@@ -73,4 +73,75 @@ class RelatorioTest {
         assertThrows(IllegalArgumentException.class,
                 () -> service.gerarRelatorio(TipoRelatorio.PDF, ""));
     }
+
+    @Test
+    @DisplayName("Deve retornar tipo correto para CSV")
+    void deveRetornarTipoCorretoParaCSV() {
+        RelatorioCSV csv = new RelatorioCSV();
+        assertThat(csv.getTipo(), is(equalTo(TipoRelatorio.CSV)));
+    }
+
+    @Test
+    @DisplayName("Deve retornar tipo correto para JSON")
+    void deveRetornarTipoCorretoParaJSON() {
+        RelatorioJSON json = new RelatorioJSON();
+        assertThat(json.getTipo(), is(equalTo(TipoRelatorio.JSON)));
+    }
+
+    @Test
+    @DisplayName("CSV deve gerar formato correto com múltiplas linhas")
+    void csvDeveGerarFormatoCorretoComMultiplasLinhas() {
+        RelatorioCSV csv = new RelatorioCSV();
+        String dados = "Nome: João\nIdade: 30\nCidade: Rio";
+
+        String resultado = csv.gerar(dados);
+
+        assertThat(resultado, containsString("Campo,Valor"));
+        assertThat(resultado, containsString("Nome,João"));
+        assertThat(resultado, containsString("Idade,30"));
+        assertThat(resultado, containsString("Cidade,Rio"));
+    }
+
+    @Test
+    @DisplayName("JSON deve gerar formato correto com múltiplas linhas")
+    void jsonDeveGerarFormatoCorretoComMultiplasLinhas() {
+        RelatorioJSON json = new RelatorioJSON();
+        String dados = "Nome: Maria\nIdade: 25";
+
+        String resultado = json.gerar(dados);
+
+        assertThat(resultado, containsString("\"relatorio\""));
+        assertThat(resultado, containsString("\"Nome\": \"Maria\""));
+        assertThat(resultado, containsString("\"Idade\": \"25\""));
+    }
+
+    @Test
+    @DisplayName("CSV deve lançar exceção para dados null")
+    void csvDeveLancarExcecaoParaDadosNull() {
+        RelatorioCSV csv = new RelatorioCSV();
+        assertThrows(IllegalArgumentException.class, () -> csv.gerar(null));
+    }
+
+    @Test
+    @DisplayName("CSV deve lançar exceção para dados vazios")
+    void csvDeveLancarExcecaoParaDadosVazios() {
+        RelatorioCSV csv = new RelatorioCSV();
+        assertThrows(IllegalArgumentException.class, () -> csv.gerar(""));
+        assertThrows(IllegalArgumentException.class, () -> csv.gerar("   "));
+    }
+
+    @Test
+    @DisplayName("JSON deve lançar exceção para dados null")
+    void jsonDeveLancarExcecaoParaDadosNull() {
+        RelatorioJSON json = new RelatorioJSON();
+        assertThrows(IllegalArgumentException.class, () -> json.gerar(null));
+    }
+
+    @Test
+    @DisplayName("JSON deve lançar exceção para dados vazios")
+    void jsonDeveLancarExcecaoParaDadosVazios() {
+        RelatorioJSON json = new RelatorioJSON();
+        assertThrows(IllegalArgumentException.class, () -> json.gerar(""));
+        assertThrows(IllegalArgumentException.class, () -> json.gerar("   "));
+    }
 }
