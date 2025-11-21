@@ -21,9 +21,8 @@ Este projeto implementa 12 exercícios práticos de refatoração de código, ap
 
 Cada exercício apresenta um problema real de qualidade de código, seguido de uma solução refatorada que aplica boas práticas de engenharia de software. O projeto utiliza Java 21, Spring Boot 3, e ferramentas modernas de teste como JUnit 5, Hamcrest e Jqwik.
 
-:::success
-**Estatísticas**: 12 exercícios | 148 testes | 42 classes | Cobertura >85% (classes testáveis)
-:::
+> [!TIP]
+> **📊 Estatísticas do Projeto**: 12 exercícios | 148 testes | 42 classes | Cobertura >85% (classes testáveis)
 
 ---
 
@@ -479,16 +478,11 @@ in the Software without restriction...
 
 ## 👨‍💻 Autor
 
-:::info
-:person: **André Luis Becker**
-:::
-
 <div align="center">
 
 **André Luis Becker** | *Software Engineer*
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-@becker84-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/becker84)
-
 [![GitHub](https://img.shields.io/badge/GitHub-@andrebecker84-181717?style=for-the-badge&logo=github)](https://github.com/andrebecker84)
 
 </div>
