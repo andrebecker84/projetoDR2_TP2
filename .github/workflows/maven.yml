@@ -35,7 +35,7 @@ jobs:
       run: mvn -B jacoco:report --file pom.xml
 
     - name: Verify coverage threshold
-      run: mvn -B jacoco:check --file pom.xml
+      run: mvn -B verify -DskipTests --file pom.xml
 
     - name: Generate JaCoCo Badge
       id: jacoco
@@ -54,24 +54,32 @@ jobs:
     - name: Extract test results
       if: always()
       run: |
+        # Create badges directory
         mkdir -p .github/badges
-        # Extract test counts from Surefire reports
-        TESTS=$(grep -oP '(?<=tests=")[^"]*' target/surefire-reports/TEST-*.xml | awk '{s+=$1} END {print s}')
-        FAILURES=$(grep -oP '(?<=failures=")[^"]*' target/surefire-reports/TEST-*.xml | awk '{s+=$1} END {print s}')
-        ERRORS=$(grep -oP '(?<=errors=")[^"]*' target/surefire-reports/TEST-*.xml | awk '{s+=$1} END {print s}')
-        SKIPPED=$(grep -oP '(?<=skipped=")[^"]*' target/surefire-reports/TEST-*.xml | awk '{s+=$1} END {print s}')
+
+        # Extract test counts from Surefire reports using simpler grep
+        TESTS=$(grep -o 'tests="[0-9]*"' target/surefire-reports/TEST-*.xml | grep -o '[0-9]*' | awk '{s+=$1} END {print s}')
+        FAILURES=$(grep -o 'failures="[0-9]*"' target/surefire-reports/TEST-*.xml | grep -o '[0-9]*' | awk '{s+=$1} END {print s}')
+        ERRORS=$(grep -o 'errors="[0-9]*"' target/surefire-reports/TEST-*.xml | grep -o '[0-9]*' | awk '{s+=$1} END {print s}')
+        SKIPPED=$(grep -o 'skipped="[0-9]*"' target/surefire-reports/TEST-*.xml | grep -o '[0-9]*' | awk '{s+=$1} END {print s}')
+
+        # Set defaults if empty
+        TESTS=${TESTS:-0}
+        FAILURES=${FAILURES:-0}
+        ERRORS=${ERRORS:-0}
+        SKIPPED=${SKIPPED:-0}
 
         # Determine badge color
         if [ "$FAILURES" -eq 0 ] && [ "$ERRORS" -eq 0 ]; then
           COLOR="brightgreen"
-          MESSAGE="$TESTS passed"
+          MESSAGE="${TESTS}%20passed"
         else
           COLOR="red"
-          MESSAGE="$FAILURES failed"
+          MESSAGE="${FAILURES}%20failed"
         fi
 
         # Create badge using shields.io
-        curl -s "https://img.shields.io/badge/tests-$MESSAGE-$COLOR?style=flat-square" > .github/badges/tests.svg
+        curl -s "https://img.shields.io/badge/tests-${MESSAGE}-${COLOR}?style=flat--square" > .github/badges/tests.svg
 
         echo "Tests: $TESTS, Failures: $FAILURES, Errors: $ERRORS, Skipped: $SKIPPED"
 
