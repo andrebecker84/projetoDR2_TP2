@@ -41,7 +41,7 @@ O projeto consiste em:
 - **12 exercícios** de refatoração de código
 - **42 classes Java** implementadas
 - **148 testes unitários** (JUnit 5 + Hamcrest + Jqwik)
-- **Cobertura de código** superior a 85% (classes testáveis)
+- **Cobertura de código** de 45.6% total (70% média dos exercícios)
 - **Documentação completa** técnica e de usuário
 
 ---
@@ -1667,19 +1667,19 @@ Análise de cobertura com threshold mínimo de 70%:
 
 | Exercício | Testes | JUnit | Jqwik | Redução | Cobertura |
 |-----------|--------|-------|-------|---------|-----------|
-| 01 - Nomeação | 10 | 7 | 3 | 0% (mantido) | >90% |
-| 02 - Valores Mágicos | 10 | 10 | 0 | -41% | >85% |
-| 03 - Null Object | 3 | 3 | 0 | -73% | >80% |
-| 04 - Imutabilidade | 14 | 14 | 0 | +17% (cobertura) | >92% |
-| 05 - Complexidade | 13 | 13 | 0 | -41% | >90% |
-| 06 - Strategy | 9 | 9 | 0 | -40% | >85% |
-| 07 - Factory | 14 | 14 | 0 | +133% (cobertura) | >95% |
-| 08 - CQS Conta | 6 | 6 | 0 | -57% | >85% |
-| 09 - CQS Fila | 11 | 11 | 0 | -31% | >85% |
-| 10 - CQS Monitor | 17 | 17 | 0 | +6% (ajustes) | >85% |
-| 11 - Switch Pedidos | 18 | 18 | 0 | 0% (mantido) | >90% |
-| 12 - Switch Notific. | 17 | 17 | 0 | -19% | >90% |
-| **TOTAL** | **142** | **139** | **3** | **-24%** | **>85%** |
+| 01 - Nomeação | 10 | 7 | 3 | 0% (mantido) | 50% |
+| 02 - Valores Mágicos | 10 | 10 | 0 | -41% | 69% |
+| 03 - Null Object | 3 | 3 | 0 | -73% | 53% |
+| 04 - Imutabilidade | 14 | 14 | 0 | +17% (cobertura) | 65% |
+| 05 - Complexidade | 13 | 13 | 0 | -41% | 83% |
+| 06 - Strategy | 9 | 9 | 0 | -40% | 76% |
+| 07 - Factory | 14 | 14 | 0 | +133% (cobertura) | 81% |
+| 08 - CQS Conta | 6 | 6 | 0 | -57% | 69% |
+| 09 - CQS Fila | 11 | 11 | 0 | -31% | 71% |
+| 10 - CQS Monitor | 17 | 17 | 0 | +6% (ajustes) | 76% |
+| 11 - Switch Pedidos | 18 | 18 | 0 | 0% (mantido) | 83% |
+| 12 - Switch Notific. | 17 | 17 | 0 | -19% | 74% |
+| **TOTAL** | **142** | **139** | **3** | **-24%** | **~70%** |
 
 **Obs**: Total de 148 testes incluindo 6 testes de verificação de cobertura (TestCoverageVerificationTest). Os exercícios 04 e 07 receberam testes adicionais para aumentar cobertura de código acima de 70%.
 
@@ -1834,15 +1834,15 @@ mvn clean verify
 
 <div align="center">
   <img src="images/JaCoCo_2025-11-21_18h44m.png" alt="JaCoCo Coverage Report" width="800" />
-  <p><em>Figura: Relatório de cobertura de código gerado pelo JaCoCo mostrando >85% de cobertura nas classes testáveis</em></p>
+  <p><em>Figura: Relatório de cobertura de código gerado pelo JaCoCo mostrando 45.6% de cobertura total (70% média dos exercícios)</em></p>
 </div>
 
 #### 7.6.3 Métricas de Cobertura
 
-- **Cobertura média**: >80%
-- **Classes com 100%**: 15
-- **Classes com >90%**: 10
-- **Classes excluídas**: 18 (classes "Antes" + Aplicacao + ExecutorTestes)
+- **Cobertura total**: 45.6% (incluindo classe Aplicacao sem testes)
+- **Cobertura exercícios**: ~70% (média dos 12 exercícios)
+- **Branches cobertos**: 56.3%
+- **Classes excluídas da análise**: 18 (classes "Antes" + Aplicacao + ExecutorTestes)
 
 #### 7.6.4 Aumento de Cobertura de Código
 
@@ -1852,9 +1852,9 @@ Para garantir a qualidade e robustez do código, foram adicionados **18 testes a
 
 | Classe | Cobertura Anterior | Cobertura Atual | Testes Adicionados | Melhoria |
 |--------|-------------------|-----------------|--------------------|-----------|
-| `ProdutoImutavel` | 64% | 92% | +10 testes | +28% |
-| `RelatorioCSV` | 60% | 95% | +4 testes | +35% |
-| `RelatorioJSON` | 47% | 89% | +4 testes | +42% |
+| `ProdutoImutavel` | 50% | 65% | +10 testes | +15% |
+| `RelatorioCSV` | 60% | 81% | +4 testes | +21% |
+| `RelatorioJSON` | 47% | 81% | +4 testes | +34% |
 
 **Detalhamento dos Testes Adicionados**:
 
@@ -1926,16 +1926,16 @@ Testes adicionados espelhando os do CSV, mas com validação específica de JSON
 **Estatísticas Finais**:
 
 - **Total de testes**: 148 (era 130, +18 novos)
-- **Cobertura geral**: >45% (incluindo classes não testáveis como Aplicacao)
-- **Cobertura classes testáveis**: >85%
+- **Cobertura geral**: 45.6% (incluindo classe Aplicacao sem testes)
+- **Cobertura exercícios**: ~70% (média dos 12 exercícios)
 - **Taxa de sucesso**: 100% (0 falhas)
 
 **Impacto no Build CI/CD**:
 
 Com o aumento de cobertura, o GitHub Actions workflow passou a executar com sucesso, gerando automaticamente badges dinâmicas que refletem:
-- Número de testes (148 passed)
-- Cobertura de código (>45%)
-- Cobertura de branches (>56%)
+- Número de testes (141 passed - contagem dos XMLs Surefire)
+- Cobertura de código (45.6%)
+- Cobertura de branches (56.3%)
 - Status do build (passing)
 
 ---
@@ -1949,8 +1949,8 @@ Este projeto demonstrou com sucesso a aplicação prática dos princípios de Cl
 #### 8.1.1 Métricas Quantitativas
 
 - **42 classes** implementadas com qualidade
-- **130 testes** unitários com 100% de sucesso
-- **Cobertura >70%** validada por JaCoCo
+- **148 testes** unitários com 100% de sucesso
+- **Cobertura 45.6%** (70% nos exercícios) validada por JaCoCo
 - **0 falhas** em todos os testes
 - **12 exercícios** completos e documentados
 - **Testes otimizados** com técnicas de parametrização
