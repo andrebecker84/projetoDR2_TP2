@@ -3,12 +3,12 @@
 
 ---
 
-**Autor**: André Becker
-**Instituição**: Instituto Infnet
-**Curso**: Engenharia de Software
-**Disciplina**: Engenharia de Software / Clean Code
-**Professor**: [Nome do Professor]
-**Data**: Novembro de 2025
+**Autor**: André Becker  
+**Instituição**: Instituto Infnet  
+**Curso**: Engenharia de Software  
+**Disciplina**: Engenharia de Software / Clean Code  
+**Professor**: Rafael Bento Cruz  
+**Data**: 18 de Novembro de 2025  
 **Versão**: 1.0.0
 
 ---
@@ -105,14 +105,14 @@ O desenvolvimento seguiu um processo sistemático em 5 etapas:
 
 ### 3.2 Ferramentas Utilizadas
 
-| Ferramenta | Versão | Propósito |
-|------------|--------|-----------|
-| IntelliJ IDEA | 2024.3 | IDE de desenvolvimento |
-| Java | 21 | Linguagem de programação |
-| Maven | 3.9.6 | Build e gerenciamento de dependências |
-| Git | 2.43 | Controle de versão |
-| JUnit 5 | 5.11.4 | Framework de testes |
-| JaCoCo | 0.8.12 | Cobertura de código |
+| Ferramenta    | Versão  | Propósito                             |
+|---------------|---------|---------------------------------------|
+| IntelliJ IDEA | 2024.3  | IDE de desenvolvimento                |
+| Java          | 21      | Linguagem de programação              |
+| Maven         | 3.9.6   | Build e gerenciamento de dependências |
+| Git           | 2.43    | Controle de versão                    |
+| JUnit 5       | 5.11.4  | Framework de testes                   |
+| JaCoCo        | 0.8.12  | Cobertura de código                   |
 
 ---
 
@@ -222,11 +222,11 @@ public class CalculadoraDepois {
 
 #### 📊 Benefícios Mensuráveis
 
-| Métrica | Antes | Depois | Impacto |
-|---------|-------|--------|---------|
-| Nomes significativos | 30% | 100% | Alto |
-| Documentação JavaDoc | 0 linhas | 15 linhas | Adicionada |
-| Clareza de código | Baixa (2/10) | Alta (10/10) | Muito Alto |
+| Métrica              | Antes        | Depois       | Impacto    |
+|----------------------|--------------|--------------|------------|
+| Nomes significativos | 30%          | 100%         | Alto       |
+| Documentação JavaDoc | 0 linhas     | 15 linhas    | Adicionada |
+| Clareza de código    | Baixa (2/10) | Alta (10/10) | Muito Alto |
 
 ---
 
@@ -320,13 +320,13 @@ public class DescontoDepois {
 
 #### 📊 Benefícios Mensuráveis
 
-| Métrica | Antes | Depois | Impacto |
-|---------|-------|--------|---------|
-| Valores mágicos | 2 | 0 | Eliminados |
-| Métodos | 1 | 5 | Melhor separação |
-| Documentação | 0 linhas | 25 linhas | Completa |
-| Bugs corrigidos | - | 1 (operador >=) | Crítico |
-| Validações | 0 | 1 | Adicionada |
+| Métrica         | Antes    | Depois          | Impacto          |
+|-----------------|----------|-----------------|------------------|
+| Valores mágicos | 2        | 0               | Eliminados       |
+| Métodos         | 1        | 5               | Melhor separação |
+| Documentação    | 0 linhas | 25 linhas       | Completa         |
+| Bugs corrigidos | -        | 1 (operador >=) | Crítico          |
+| Validações      | 0        | 1               | Adicionada       |
 
 ---
 
@@ -441,12 +441,12 @@ public class PedidoDepois {
 
 #### 📊 Benefícios Mensuráveis
 
-| Métrica | Antes | Depois | Impacto |
-|---------|-------|--------|---------|
-| Risco de NPE | Alto | Zero | Eliminado |
-| Verificações de null | 0 | 0 (desnecessárias) | Não requeridas |
-| Classes | 1 | 4 | Melhor design |
-| Testabilidade | Baixa | Alta | Muito Alto |
+| Métrica              | Antes  | Depois             | Impacto        |
+|----------------------|--------|--------------------|----------------|
+| Risco de NPE         | Alto   | Zero               | Eliminado      |
+| Verificações de null | 0      | 0 (desnecessárias) | Não requeridas |
+| Classes              | 1      | 4                  | Melhor design  |
+| Testabilidade        | Baixa  | Alta               | Muito Alto     |
 
 ---
 
@@ -532,12 +532,12 @@ public class AjusteDepois {
 
 #### 📊 Benefícios Mensuráveis
 
-| Métrica | Antes | Depois | Impacto |
-|---------|-------|--------|---------|
-| Mutações | 1 | 0 | Eliminadas |
-| Thread-safety | Não | Sim | Garantida |
-| Efeitos colaterais | 1 | 0 | Eliminados |
-| Rastreabilidade | Baixa | Alta | Alto |
+| Métrica            | Antes  | Depois  | Impacto    |
+|--------------------|--------|---------|------------|
+| Mutações           | 1      | 0       | Eliminadas |
+| Thread-safety      | Não    | Sim     | Garantida  |
+| Efeitos colaterais | 1      | 0       | Eliminados |
+| Rastreabilidade    | Baixa  | Alta    | Alto       |
 
 ---
 
@@ -668,12 +668,12 @@ public class ClienteClassificadorDepois {
 
 #### 📊 Benefícios Mensuráveis
 
-| Métrica | Antes | Depois | Impacto |
-|---------|-------|--------|---------|
-| Complexidade ciclomática | 7 | 2 | Redução de 71% |
-| Níveis de aninhamento | 3 | 1 | Redução de 67% |
-| Métodos | 1 | 7 | Melhor separação |
-| Linhas por método | ~20 | ~5 | Mais legível |
+| Métrica                  | Antes  | Depois  | Impacto          |
+|--------------------------|--------|---------|------------------|
+| Complexidade ciclomática | 7      | 2       | Redução de 71%   |
+| Níveis de aninhamento    | 3      | 1       | Redução de 67%   |
+| Métodos                  | 1      | 7       | Melhor separação |
+| Linhas por método        | ~20    | ~5      | Mais legível     |
 
 ---
 
@@ -765,11 +765,11 @@ public class PersonalizacaoDepois {
 
 #### 📊 Benefícios Mensuráveis
 
-| Métrica | Antes | Depois | Impacto |
-|---------|-------|--------|---------|
-| Linhas de código | 25 | 15 | Redução de 40% |
-| Switch/case | 1 (6 cases) | 0 | Eliminado |
-| Extensibilidade | Baixa | Alta | Alto |
+| Métrica          | Antes       | Depois  | Impacto        |
+|------------------|-------------|---------|----------------|
+| Linhas de código | 25          | 15      | Redução de 40% |
+| Switch/case      | 1 (6 cases) | 0       | Eliminado      |
+| Extensibilidade  | Baixa       | Alta    | Alto           |
 
 ---
 
@@ -906,12 +906,12 @@ public class RelatorioServiceDepois {
 
 #### 📊 Benefícios Mensuráveis
 
-| Métrica | Antes | Depois | Impacto |
-|---------|-------|--------|---------|
-| Classes | 1 | 7 | Melhor separação |
-| Responsabilidades/classe | 3 | 1 | SRP aplicado |
-| Acoplamento | Alto | Baixo | Reduzido |
-| Testabilidade | Baixa | Alta | Muito Alto |
+| Métrica                  | Antes  | Depois  | Impacto          |
+|--------------------------|--------|---------|------------------|
+| Classes                  | 1      | 7       | Melhor separação |
+| Responsabilidades/classe | 3      | 1       | SRP aplicado     |
+| Acoplamento              | Alto   | Baixo   | Reduzido         |
+| Testabilidade            | Baixa  | Alta    | Muito Alto       |
 
 ---
 
@@ -1014,12 +1014,12 @@ public class ContaBancariaDepois {
 
 #### 📊 Benefícios Mensuráveis
 
-| Métrica | Antes | Depois | Impacto |
-|---------|-------|--------|---------|
-| Violações CQS | 1 | 0 | Eliminada |
-| Previsibilidade | Baixa | Alta | Alto |
-| Métodos | 1 | 3 | Melhor separação |
-| Validações | 0 | 2 | Adicionadas |
+| Métrica         | Antes  | Depois  | Impacto          |
+|-----------------|--------|---------|------------------|
+| Violações CQS   | 1      | 0       | Eliminada        |
+| Previsibilidade | Baixa  | Alta    | Alto             |
+| Métodos         | 1      | 3       | Melhor separação |
+| Validações      | 0      | 2       | Adicionadas      |
 
 ---
 
@@ -1119,11 +1119,11 @@ public class FilaMensagensDepois {
 
 #### 📊 Benefícios Mensuráveis
 
-| Métrica | Antes | Depois | Impacto |
-|---------|-------|--------|---------|
-| Violações CQS | 1 | 0 | Eliminada |
-| Flexibilidade | Baixa | Alta | Alto |
-| Métodos públicos | 1 | 5 | Mais opções |
+| Métrica          | Antes  | Depois  | Impacto     |
+|------------------|--------|---------|-------------|
+| Violações CQS    | 1      | 0       | Eliminada   |
+| Flexibilidade    | Baixa  | Alta    | Alto        |
+| Métodos públicos | 1      | 5       | Mais opções |
 
 ---
 
@@ -1232,12 +1232,12 @@ public class MonitoramentoDepois {
 
 #### 📊 Benefícios Mensuráveis
 
-| Métrica | Antes | Depois | Impacto |
-|---------|-------|--------|---------|
-| Getters impuros | 1 | 0 | Eliminado |
-| Métodos | 1 | 6 | Melhor separação |
-| Validações | 0 | 1 | Adicionada |
-| Previsibilidade | Baixa | Alta | Alto |
+| Métrica         | Antes  | Depois  | Impacto          |
+|-----------------|--------|---------|------------------|
+| Getters impuros | 1      | 0       | Eliminado        |
+| Métodos         | 1      | 6       | Melhor separação |
+| Validações      | 0      | 1       | Adicionada       |
+| Previsibilidade | Baixa  | Alta    | Alto             |
 
 ---
 
@@ -1347,12 +1347,12 @@ public class PedidoServiceDepois {
 
 #### 📊 Benefícios Mensuráveis
 
-| Métrica | Antes | Depois | Impacto |
-|---------|-------|--------|---------|
-| Default desnecessário | 1 | 0 | Eliminado |
-| Garantia compilador | Não | Sim | Adicionada |
-| Métodos | 1 | 4 | Melhor separação |
-| Robustez | Baixa | Alta | Alto |
+| Métrica               | Antes  | Depois  | Impacto          |
+|-----------------------|--------|---------|------------------|
+| Default desnecessário | 1      | 0       | Eliminado        |
+| Garantia compilador   | Não    | Sim     | Adicionada       |
+| Métodos               | 1      | 4       | Melhor separação |
+| Robustez              | Baixa  | Alta    | Alto             |
 
 ---
 
@@ -1475,12 +1475,12 @@ public class NotificacaoServiceDepois {
 
 #### 📊 Benefícios Mensuráveis
 
-| Métrica | Antes | Depois | Impacto |
-|---------|-------|--------|---------|
-| Default desnecessário | 1 | 0 | Eliminado |
-| Métodos | 1 | 8 | Melhor separação |
-| Validações | 0 | 2 | Adicionadas |
-| Robustez | Média | Alta | Alto |
+| Métrica               | Antes  | Depois  | Impacto          |
+|-----------------------|--------|---------|------------------|
+| Default desnecessário | 1      | 0       | Eliminado        |
+| Métodos               | 1      | 8       | Melhor separação |
+| Validações            | 0      | 2       | Adicionadas      |
+| Robustez              | Média  | Alta    | Alto             |
 
 ---
 
@@ -1643,13 +1643,13 @@ Análise de cobertura com threshold mínimo de 70%:
 
 ### 7.2 Ferramentas de Teste
 
-| Ferramenta | Versão | Propósito |
-|------------|--------|-----------|
-| JUnit 5 | 5.11.4 | Framework base de testes |
-| Hamcrest | 3.0 | Matchers expressivos |
-| Jqwik | 1.9.3 | Property-based testing |
-| JaCoCo | 0.8.12 | Análise de cobertura |
-| Mockito | 5.14.2 | Mocking (quando necessário) |
+| Ferramenta  | Versão  | Propósito                   |
+|-------------|---------|-----------------------------|
+| JUnit 5     | 5.11.4  | Framework base de testes    |
+| Hamcrest    | 3.0     | Matchers expressivos        |
+| Jqwik       | 1.9.3   | Property-based testing      |
+| JaCoCo      | 0.8.12  | Análise de cobertura        |
+| Mockito     | 5.14.2  | Mocking (quando necessário) |
 
 ### 7.3 Estatísticas de Testes
 
@@ -1665,21 +1665,21 @@ Análise de cobertura com threshold mínimo de 70%:
 
 **Estratégia de Consolidação**: Os testes foram refatorados utilizando técnicas modernas de parametrização (@ParameterizedTest, @CsvSource, @EnumSource, @MethodSource) para reduzir duplicação e aumentar manutenibilidade.
 
-| Exercício | Testes | JUnit | Jqwik | Redução | Cobertura |
-|-----------|--------|-------|-------|---------|-----------|
-| 01 - Nomeação | 10 | 7 | 3 | 0% (mantido) | 50% |
-| 02 - Valores Mágicos | 10 | 10 | 0 | -41% | 69% |
-| 03 - Null Object | 3 | 3 | 0 | -73% | 53% |
-| 04 - Imutabilidade | 14 | 14 | 0 | +17% (cobertura) | 65% |
-| 05 - Complexidade | 13 | 13 | 0 | -41% | 83% |
-| 06 - Strategy | 9 | 9 | 0 | -40% | 76% |
-| 07 - Factory | 14 | 14 | 0 | +133% (cobertura) | 81% |
-| 08 - CQS Conta | 6 | 6 | 0 | -57% | 69% |
-| 09 - CQS Fila | 11 | 11 | 0 | -31% | 71% |
-| 10 - CQS Monitor | 17 | 17 | 0 | +6% (ajustes) | 76% |
-| 11 - Switch Pedidos | 18 | 18 | 0 | 0% (mantido) | 83% |
-| 12 - Switch Notific. | 17 | 17 | 0 | -19% | 74% |
-| **TOTAL** | **142** | **139** | **3** | **-24%** | **~70%** |
+| Exercício            | Testes  | JUnit   | Jqwik  | Redução           | Cobertura  |
+|----------------------|---------|---------|--------|-------------------|------------|
+| 01 - Nomeação        | 10      | 7       | 3      | 0% (mantido)      | 50%        |
+| 02 - Valores Mágicos | 10      | 10      | 0      | -41%              | 69%        |
+| 03 - Null Object     | 3       | 3       | 0      | -73%              | 53%        |
+| 04 - Imutabilidade   | 14      | 14      | 0      | +17% (cobertura)  | 65%        |
+| 05 - Complexidade    | 13      | 13      | 0      | -41%              | 83%        |
+| 06 - Strategy        | 9       | 9       | 0      | -40%              | 76%        |
+| 07 - Factory         | 14      | 14      | 0      | +133% (cobertura) | 81%        |
+| 08 - CQS Conta       | 6       | 6       | 0      | -57%              | 69%        |
+| 09 - CQS Fila        | 11      | 11      | 0      | -31%              | 71%        |
+| 10 - CQS Monitor     | 17      | 17      | 0      | +6% (ajustes)     | 76%        |
+| 11 - Switch Pedidos  | 18      | 18      | 0      | 0% (mantido)      | 83%        |
+| 12 - Switch Notific. | 17      | 17      | 0      | -19%              | 74%        |
+| **TOTAL**            | **142** | **139** | **3**  | **-24%**          | **~70%**   |
 
 **Obs**: Total de 148 testes incluindo 6 testes de verificação de cobertura (TestCoverageVerificationTest). Os exercícios 04 e 07 receberam testes adicionais para aumentar cobertura de código acima de 70%.
 
@@ -1801,11 +1801,11 @@ Além da refatoração dos exercícios e testes, o código de infraestrutura do 
 
 **Métricas de Melhoria**:
 
-| Arquivo | Antes | Depois | Impacto |
-|---------|-------|--------|---------|
-| Aplicacao.java | 15 valores mágicos | 0 | Eliminados |
-| ExecutorTestes.java | 1 bug crítico | 0 | Corrigido |
-| TestCoverageVerificationTest.java | Código duplicado | 0 | Eliminado |
+| Arquivo                           | Antes              | Depois  | Impacto    |
+|-----------------------------------|--------------------|---------|------------|
+| Aplicacao.java                    | 15 valores mágicos | 0       | Eliminados |
+| ExecutorTestes.java               | 1 bug crítico      | 0       | Corrigido  |
+| TestCoverageVerificationTest.java | Código duplicado   | 0       | Eliminado  |
 
 ### 7.6 Cobertura de Código
 
@@ -1823,7 +1823,7 @@ O JaCoCo está configurado para:
 mvn clean verify
 
 # Ou usar scripts de conveniência
-.\executar-testes.bat    # Windows
+./executar-testes.bat    # Windows
 ./executar-testes.sh     # Linux/Mac
 
 # Visualizar relatório
@@ -1850,11 +1850,11 @@ Para garantir a qualidade e robustez do código, foram adicionados **18 testes a
 
 **Classes com Cobertura Aprimorada**:
 
-| Classe | Cobertura Anterior | Cobertura Atual | Testes Adicionados | Melhoria |
-|--------|-------------------|-----------------|--------------------|-----------|
-| `ProdutoImutavel` | 50% | 65% | +10 testes | +15% |
-| `RelatorioCSV` | 60% | 81% | +4 testes | +21% |
-| `RelatorioJSON` | 47% | 81% | +4 testes | +34% |
+| Classe            | Cobertura Anterior | Cobertura Atual  | Testes Adicionados  | Melhoria   |
+|-------------------|--------------------|------------------|---------------------|------------|
+| `ProdutoImutavel` | 50%                | 65%              | +10 testes          | +15%       |
+| `RelatorioCSV`    | 60%                | 81%              | +4 testes           | +21%       |
+| `RelatorioJSON`   | 47%                | 81%              | +4 testes           | +34%       |
 
 **Detalhamento dos Testes Adicionados**:
 
@@ -1957,13 +1957,13 @@ Este projeto demonstrou com sucesso a aplicação prática dos princípios de Cl
 
 #### 8.1.2 Melhorias de Qualidade
 
-| Aspecto | Nível Antes | Nível Depois | Impacto |
-|---------|-------------|--------------|---------|
-| Legibilidade | Baixo | Alto | Muito Alto |
-| Manutenibilidade | Baixo | Alto | Alto |
-| Testabilidade | Médio | Muito Alto | Alto |
+| Aspecto                  | Nível Antes    | Nível Depois    | Impacto        |
+|--------------------------|----------------|-----------------|----------------|
+| Legibilidade             | Baixo          | Alto            | Muito Alto     |
+| Manutenibilidade         | Baixo          | Alto            | Alto           |
+| Testabilidade            | Médio          | Muito Alto      | Alto           |
 | Complexidade Ciclomática | Alta (média 7) | Baixa (média 2) | Redução de 71% |
-| Code Smells | Presentes | Eliminados | Total |
+| Code Smells              | Presentes      | Eliminados      | Total          |
 
 ### 8.2 Aprendizados Principais
 
@@ -2092,7 +2092,7 @@ A experiência reforça a importância de:
 
 *Este documento foi elaborado seguindo padrões acadêmicos rigorosos e boas práticas de documentação técnica.*
 
-**Autor**: André Becker
+**Autor**: André Luis Becker
 **Instituto Infnet** - Engenharia de Software
 **Novembro de 2025**
 
