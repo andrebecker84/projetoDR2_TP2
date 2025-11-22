@@ -57,11 +57,11 @@ jobs:
         # Create badges directory
         mkdir -p .github/badges
 
-        # Extract test counts from Surefire reports using simpler grep
-        TESTS=$(grep -o 'tests="[0-9]*"' target/surefire-reports/TEST-*.xml | grep -o '[0-9]*' | awk '{s+=$1} END {print s}')
-        FAILURES=$(grep -o 'failures="[0-9]*"' target/surefire-reports/TEST-*.xml | grep -o '[0-9]*' | awk '{s+=$1} END {print s}')
-        ERRORS=$(grep -o 'errors="[0-9]*"' target/surefire-reports/TEST-*.xml | grep -o '[0-9]*' | awk '{s+=$1} END {print s}')
-        SKIPPED=$(grep -o 'skipped="[0-9]*"' target/surefire-reports/TEST-*.xml | grep -o '[0-9]*' | awk '{s+=$1} END {print s}')
+        # Extract test counts from Surefire reports (use -h to suppress filenames)
+        TESTS=$(grep -h -o 'tests="[0-9]*"' target/surefire-reports/TEST-*.xml | grep -o '[0-9]*' | awk '{s+=$1} END {print s}')
+        FAILURES=$(grep -h -o 'failures="[0-9]*"' target/surefire-reports/TEST-*.xml | grep -o '[0-9]*' | awk '{s+=$1} END {print s}')
+        ERRORS=$(grep -h -o 'errors="[0-9]*"' target/surefire-reports/TEST-*.xml | grep -o '[0-9]*' | awk '{s+=$1} END {print s}')
+        SKIPPED=$(grep -h -o 'skipped="[0-9]*"' target/surefire-reports/TEST-*.xml | grep -o '[0-9]*' | awk '{s+=$1} END {print s}')
 
         # Set defaults if empty
         TESTS=${TESTS:-0}

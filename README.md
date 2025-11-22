@@ -22,7 +22,7 @@ Este projeto implementa 12 exercícios práticos de refatoração de código, ap
 Cada exercício apresenta um problema real de qualidade de código, seguido de uma solução refatorada que aplica boas práticas de engenharia de software. O projeto utiliza Java 21, Spring Boot 3, e ferramentas modernas de teste como JUnit 5, Hamcrest e Jqwik.
 
 > [!TIP]
->> **📊 Estatísticas do Projeto**: 12 exercícios | 148 testes | 42 classes | Cobertura >85% (classes testáveis)
+>> **📊 Estatísticas do Projeto**: 12 exercícios | 148 testes | 42 classes | Cobertura 45% (74% excl. Application)
 
 ---
 
@@ -145,7 +145,7 @@ mvn test-compile exec:java
 📝 Classes Java:      42
 🧪 Testes Unitários:  148 (142 exercícios + 6 verificação)
 ✅ Testes Passando:   148
-📈 Cobertura:         >85% (classes testáveis)
+📈 Cobertura:         45% total | 74% (excl. Application)
 📄 Linhas de Código:  ~4.500
 🎯 Falhas:            0
 💡 Aprimoramento:     +18 testes para cobertura
@@ -426,19 +426,19 @@ mvn verify
 
 | Exercício                      | Testes  | JUnit   | Jqwik  | Cobertura  | Status     |
 |--------------------------------|---------|---------|--------|------------|------------|
-| Exercício 1 - Nomeação         | 10      | 7       | 3      | >90%       | ✅ PASS     |
-| Exercício 2 - Valores Mágicos  | 10      | 10      | 0      | >85%       | ✅ PASS     |
-| Exercício 3 - Null Object      | 3       | 3       | 0      | >80%       | ✅ PASS     |
-| Exercício 4 - Imutabilidade    | 14      | 14      | 0      | >92% ⬆️    | ✅ PASS     |
-| Exercício 5 - Complexidade     | 13      | 13      | 0      | >90%       | ✅ PASS     |
-| Exercício 6 - Personalização   | 9       | 9       | 0      | >85%       | ✅ PASS     |
-| Exercício 7 - Abstract Factory | 14      | 14      | 0      | >95% ⬆️    | ✅ PASS     |
-| Exercício 8 - CQS Conta        | 6       | 6       | 0      | >85%       | ✅ PASS     |
-| Exercício 9 - CQS Fila         | 11      | 11      | 0      | >85%       | ✅ PASS     |
-| Exercício 10 - CQS Monitor     | 17      | 17      | 0      | >85%       | ✅ PASS     |
-| Exercício 11 - Switch Pedidos  | 18      | 18      | 0      | >90%       | ✅ PASS     |
-| Exercício 12 - Switch Notific. | 17      | 17      | 0      | >90%       | ✅ PASS     |
-| **TOTAL**                      | **142** | **139** | **3**  | **>85%**   | **✅ 100%** |
+| Exercício 1 - Nomeação         | 10      | 7       | 3      | 50%        | ✅ PASS     |
+| Exercício 2 - Valores Mágicos  | 10      | 10      | 0      | 69%        | ✅ PASS     |
+| Exercício 3 - Null Object      | 3       | 3       | 0      | 53%        | ✅ PASS     |
+| Exercício 4 - Imutabilidade    | 14      | 14      | 0      | 65% ⬆️     | ✅ PASS     |
+| Exercício 5 - Complexidade     | 13      | 13      | 0      | 83%        | ✅ PASS     |
+| Exercício 6 - Personalização   | 9       | 9       | 0      | 76%        | ✅ PASS     |
+| Exercício 7 - Abstract Factory | 14      | 14      | 0      | 81% ⬆️     | ✅ PASS     |
+| Exercício 8 - CQS Conta        | 6       | 6       | 0      | 69%        | ✅ PASS     |
+| Exercício 9 - CQS Fila         | 11      | 11      | 0      | 71%        | ✅ PASS     |
+| Exercício 10 - CQS Monitor     | 17      | 17      | 0      | 76%        | ✅ PASS     |
+| Exercício 11 - Switch Pedidos  | 18      | 18      | 0      | 83%        | ✅ PASS     |
+| Exercício 12 - Switch Notific. | 17      | 17      | 0      | 74%        | ✅ PASS     |
+| **TOTAL**                      | **142** | **139** | **3**  | **~70%**   | **✅ 100%** |
 
 > [!NOTE] 
 >> - **Total de 148 testes** incluindo 6 testes de verificação de cobertura (TestCoverageVerificationTest).
@@ -511,9 +511,7 @@ in the Software without restriction...
 
 <div align="center">
 
-<object data="doc/images/card.svg" type="image/svg+xml" width="360" height="175">
-  <img src="doc/images/card.svg" width="360" alt="André Luis Becker - Software Engineer" />
-</object>
+<img src="doc/images/card.svg" width="360" alt="André Luis Becker - Software Engineer" />
 
 **Desenvolvido com dedicação e boas práticas.** 🧼✨
 *Instituto Infnet - Eng. Software - 2025.*
